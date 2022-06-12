@@ -1,4 +1,3 @@
-# import yfinance as yf
 from openpyxl import load_workbook
 import logging
 import json
@@ -10,11 +9,10 @@ import sys
 from tradingview_ta import TA_Handler, Interval
 
 '''
-	Get stats from yahoo finance 
+	Get stats from tradingview 
 	for each ticker symbol in the spreadsheet
 '''
 def get_stats(ticker, country, exchange, row_count):
-	# info = yf.Tickers(ticker).tickers[ticker].info
 	handler = TA_Handler(
 		symbol=ticker,
 		screener=country,
